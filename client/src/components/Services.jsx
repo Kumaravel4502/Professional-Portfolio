@@ -4,23 +4,23 @@ import { Globe, Database, Zap, Users } from 'lucide-react';
 const services = [
     {
         icon: Globe,
-        title: "Custom Web Applications",
-        desc: "MERN stack websites & SaaS platforms tailored to your business needs"
+        title: "Portfolio & Business Websites",
+        desc: "Responsive websites for personal brands, startups, and local businesses"
     },
     {
         icon: Database,
-        title: "Backend Systems & APIs",
-        desc: "Scalable Node.js + Express + MongoDB/Prisma backends with real-time features"
+        title: "Basic Full-Stack Apps",
+        desc: "Beginner-friendly MERN applications with authentication and CRUD features"
     },
     {
         icon: Zap,
-        title: "Performance & SEO Optimization",
-        desc: "Fast-loading, search-engine-friendly applications that rank and convert"
+        title: "Website Improvements",
+        desc: "Fix UI issues, improve mobile view, and optimize loading speed"
     },
     {
         icon: Users,
-        title: "Full Project Consultation",
-        desc: "Strategy calls, tech audits, and end-to-end development partnership"
+        title: "Long-Term Learning Partnership",
+        desc: "Transparent collaboration as I build your project and grow with your business"
     }
 ];
 
@@ -35,7 +35,7 @@ export default function Services() {
                 >
                     Services I Offer
                 </motion.h2>
-                <p className="text-center text-white/60 text-xl mb-16">Let’s turn your idea into a revenue-generating product</p>
+                <p className="text-center text-white/60 text-xl mb-16">Practical development support for early-stage ideas and small projects</p>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, i) => (

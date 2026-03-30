@@ -18,16 +18,16 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl text-white text-sm mb-8">
             <Sparkles size={18} className="text-violet-400" />
-            Open for select client projects • 2026
+            Fresher Freelancer • Open to starter projects
           </div>
 
           <h1 className="text-6xl md:text-7xl font-bold leading-none tracking-tighter text-white">
-            I build <span className="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">scalable digital products</span> that grow your business
+            I build <span className="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">clean and responsive websites</span> for startups and small businesses
           </h1>
 
           <p className="mt-8 text-2xl text-white/90 font-light max-w-lg">
-            MERN Stack Expert • Full-Stack Developer<br />
-            Turning your vision into high-performing web applications
+            Junior MERN Stack Developer<br />
+            Focused on affordable, high-quality first versions
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -43,13 +43,13 @@ export default function Hero() {
               href="#contact"
               className="px-8 py-5 border-2 border-white/30 hover:border-white text-white rounded-3xl font-semibold text-lg transition"
             >
-              Book a Free Strategy Call
+              Start With a Free Discussion
             </a>
           </div>
           <VisitorCounter /> 
         </motion.div>
 
-        {/* RIGHT SIDE - Professional Developer Portrait */}
+        {/* RIGHT SIDE - Animated Coder Visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -63,8 +63,8 @@ export default function Hero() {
             {/* Image Container */}
             <div className="w-80 h-80 md:w-96 md:h-96 bg-zinc-900/70 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1556155092-490a1ba16284"
-                alt="Kumaravel D - Full Stack Developer"
+                src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+                alt="Animated coder working at a desk"
                 className="w-full h-full object-cover"
               />
             </div>

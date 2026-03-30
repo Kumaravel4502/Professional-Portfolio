@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle.jsx';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +10,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all ${scrolled ? 'bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg shadow-md' : ''}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all ${scrolled ? 'bg-zinc-950/80 backdrop-blur-lg shadow-md' : ''}`}>
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
         <h1 className="text-2xl font-bold tracking-tight">Kumaravel D</h1>
         
@@ -19,8 +18,9 @@ export default function Navbar() {
           <a href="#about" className="hover:text-violet-600 transition">About</a>
           <a href="#skills" className="hover:text-violet-600 transition">Skills</a>
           <a href="#projects" className="hover:text-violet-600 transition">Projects</a>
+          <a href="#pricing" className="hover:text-violet-600 transition">Pricing</a>
+          <a href="#faq" className="hover:text-violet-600 transition">FAQ</a>
           <a href="#contact" className="hover:text-violet-600 transition">Contact</a>
-          <ThemeToggle />
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
@@ -30,13 +30,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-zinc-950 border-t py-4">
+        <div className="md:hidden bg-zinc-950 border-t border-zinc-800 py-4">
           <div className="flex flex-col gap-4 px-6 text-center">
             <a href="#about" onClick={() => setIsOpen(false)} className="py-2">About</a>
             <a href="#skills" onClick={() => setIsOpen(false)} className="py-2">Skills</a>
             <a href="#projects" onClick={() => setIsOpen(false)} className="py-2">Projects</a>
+            <a href="#pricing" onClick={() => setIsOpen(false)} className="py-2">Pricing</a>
+            <a href="#faq" onClick={() => setIsOpen(false)} className="py-2">FAQ</a>
             <a href="#contact" onClick={() => setIsOpen(false)} className="py-2">Contact</a>
-            <ThemeToggle />
           </div>
         </div>
       )}

@@ -7,6 +7,9 @@ import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
 import Services from './components/Services.jsx';     // ← NEW
 import Testimonials from './components/Testimonials.jsx';
+import Pricing from './components/Pricing.jsx';
+import Process from './components/Process.jsx';
+import Faq from './components/Faq.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -19,7 +22,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-zinc-950 text-white">
+      <div className="dark min-h-screen bg-zinc-950 text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={
@@ -30,6 +33,9 @@ function App() {
               <Skills />
               <Projects />
               <Testimonials />
+              <Pricing />
+              <Process />
+              <Faq />
               <Contact />
             </>
           } />

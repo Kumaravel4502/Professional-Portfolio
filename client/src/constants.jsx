@@ -56,13 +56,13 @@ export const projects = [
   },
   {
     id: 6,
-    title: "VitaFit – Fitness & Wellness App",
-    desc: "Beautiful habit tracker and workout planner loved by fitness influencers.",
-    tech: ["React", "Node.js", "MongoDB", "Chart.js"],
-    live: "https://vitafit.app",
-    github: "https://github.com/yourusername/vitafit",
+    title: "PasteBin - Pastebin.com Clone",
+    desc: "PasteBin is a simple pastebin clone built with React, Node.js, and MongoDB. It allows users to create, view, and manage their pastes.",
+    tech: ["React", "Node.js", "MongoDB"],
+    live: "https://pastebin-lite-4.onrender.com/",
+    github: "https://github.com/Kumaravel4502/Pastebin-Lite",
     category: "Web App",
-    // impact: "42k+ downloads"
+    image: "images/Pastebin-lite.png  ",
   },
 ];
 

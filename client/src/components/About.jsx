@@ -14,24 +14,24 @@ export default function About() {
               Hi, I'm <span className="text-violet-600">Kumaravel D</span>
             </h2>
             <p className="text-2xl leading-relaxed text-zinc-600 mb-8">
-              A passionate full-stack developer who partners with ambitious businesses to build fast, scalable, and beautiful web applications that actually deliver results.
+              I am a fresher full-stack developer starting my freelancing journey and helping clients build modern web experiences.
             </p>
             <p className="text-lg text-zinc-500 max-w-2xl">
-              With expertise in the MERN stack and modern tools, I’ve helped startups and established companies launch products that increased revenue, improved user engagement, and streamlined operations.
+              I work with the MERN stack and focus on clear communication, on-time delivery, and clean code so your idea can go live quickly.
             </p>
 
             <div className="mt-12 grid grid-cols-3 gap-8">
               <div>
-                <div className="text-4xl font-bold text-violet-600">5+</div>
-                <div className="text-zinc-500">Years Experience</div>
+                <div className="text-4xl font-bold text-violet-600">Fresher</div>
+                <div className="text-zinc-500">Freelancer</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-violet-600">15+</div>
-                <div className="text-zinc-500">Projects Delivered</div>
+                <div className="text-4xl font-bold text-violet-600">MERN</div>
+                <div className="text-zinc-500">Tech Stack</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-violet-600">100%</div>
-                <div className="text-zinc-500">Client Satisfaction</div>
+                <div className="text-4xl font-bold text-violet-600">24h</div>
+                <div className="text-zinc-500">Reply Time</div>
               </div>
             </div>
           </motion.div>
@@ -41,23 +41,23 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             className="md:col-span-5 bg-zinc-100 p-8 rounded-3xl"
           >
-            <h3 className="font-semibold text-xl mb-6">Why clients choose me:</h3>
+            <h3 className="font-semibold text-xl mb-6">Why work with me:</h3>
             <ul className="space-y-6 text-zinc-600">
               <li className="flex gap-4">
                 <span className="text-2xl">⚡</span>
-                <div>Blazing-fast, scalable applications built with modern tech</div>
+                <div>Affordable starter pricing for small businesses and new founders</div>
               </li>
               <li className="flex gap-4">
                 <span className="text-2xl">🎯</span>
-                <div>Pixel-perfect UI/UX that converts visitors into customers</div>
+                <div>Simple and responsive UI that looks good on all devices</div>
               </li>
               <li className="flex gap-4">
                 <span className="text-2xl">🔒</span>
-                <div>Clean code, security-first approach, and long-term maintainability</div>
+                <div>Clean code with proper structure so your project can grow later</div>
               </li>
               <li className="flex gap-4">
                 <span className="text-2xl">📈</span>
-                <div>Focus on real business outcomes — not just pretty interfaces</div>
+                <div>Friendly communication and regular updates during the project</div>
               </li>
             </ul>
           </motion.div>

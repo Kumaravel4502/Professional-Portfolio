@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 
 export default function Projects() {
   const [selected, setSelected] = useState(null);
+  const getFallbackImage = (id) => `https://picsum.photos/seed/project-${id}/1200/800`;
 
   return (
-    <section id="projects" className="py-28 bg-zinc-950 text-white">
+    <section id="projects" className="py-28 bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -16,7 +17,7 @@ export default function Projects() {
         >
           Selected Work
         </motion.h2>
-        <p className="text-center text-white/60 text-xl mb-16">Projects that turned ideas into impact</p>
+        <p className="text-center text-zinc-600 dark:text-white/60 text-xl mb-16">Projects that turned ideas into impact</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
@@ -24,34 +25,35 @@ export default function Projects() {
               key={project.id}
               whileHover={{ scale: 1.03, y: -10 }}
               onClick={() => setSelected(project)}
-              className="group bg-zinc-900/70 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden cursor-pointer"
+              className="group bg-white/90 dark:bg-zinc-900/70 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-3xl overflow-hidden cursor-pointer shadow-sm dark:shadow-none"
             >
-              <div className="relative h-64">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img 
-                  // src={`https://picsum.photos/id/${project.id * 11}/800/600`} 
-                                    src={project.image} 
-
+                  src={project.image || getFallbackImage(project.id)}
                   alt={project.title}
-                  className="w-full h-full object-fill transition-all group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.src = getFallbackImage(project.id);
+                  }}
+                  className="w-full h-full object-cover object-center transition-all group-hover:scale-110"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-zinc-900 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-xs uppercase tracking-widest font-medium px-4 py-1 bg-white/10 backdrop-blur-md rounded-3xl">
+                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-zinc-950/80 dark:from-zinc-900 to-transparent" />
+                <div className="absolute bottom-6 left-6 text-xs uppercase tracking-widest font-medium px-4 py-1 bg-white/80 dark:bg-white/10 backdrop-blur-md rounded-3xl">
                   {project.category}
                 </div>
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-white/60 line-clamp-3 mb-6">{project.desc}</p>
+                <p className="text-zinc-600 dark:text-white/60 line-clamp-3 mb-6">{project.desc}</p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.tech.slice(0, 4).map((t) => (
-                    <span key={t} className="text-xs px-4 py-1 bg-white/10 rounded-3xl">{t}</span>
+                    <span key={t} className="text-xs px-4 py-1 bg-zinc-100 dark:bg-white/10 rounded-3xl">{t}</span>
                   ))}
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-sm">
-                  <span className="font-medium text-emerald-400">{project.impact}</span>
-                  <span className="text-white/40 group-hover:text-white transition">View case study →</span>
+                <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-white/10 flex items-center justify-between text-sm">
+                  <span className="font-medium text-emerald-600 dark:text-emerald-400">{project.impact ?? 'Project showcase'}</span>
+                  <span className="text-zinc-500 dark:text-white/40 group-hover:text-zinc-900 dark:group-hover:text-white transition">View case study →</span>
                 </div>
               </div>
             </motion.div>
