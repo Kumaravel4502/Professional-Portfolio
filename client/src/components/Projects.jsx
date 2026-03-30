@@ -27,17 +27,16 @@ export default function Projects() {
               onClick={() => setSelected(project)}
               className="group bg-white/90 dark:bg-zinc-900/70 backdrop-blur-xl border border-zinc-200 dark:border-white/10 rounded-3xl overflow-hidden cursor-pointer shadow-sm dark:shadow-none"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative w-full h-56 overflow-hidden bg-zinc-100 dark:bg-zinc-800/60">
                 <img 
                   src={project.image || getFallbackImage(project.id)}
                   alt={project.title}
                   onError={(e) => {
                     e.currentTarget.src = getFallbackImage(project.id);
                   }}
-                  className="w-full h-full object-cover object-center transition-all group-hover:scale-110"
+                  className="block w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-zinc-950/80 dark:from-zinc-900 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-xs uppercase tracking-widest font-medium px-4 py-1 bg-white/80 dark:bg-white/10 backdrop-blur-md rounded-3xl">
+                <div className="absolute bottom-4 left-4 text-xs uppercase tracking-widest font-medium px-4 py-1 bg-white/90 dark:bg-black/40 backdrop-blur-md rounded-3xl">
                   {project.category}
                 </div>
               </div>

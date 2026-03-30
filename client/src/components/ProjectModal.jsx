@@ -18,14 +18,14 @@ export default function ProjectModal({ project, onClose }) {
         onClick={(e) => e.stopPropagation()}
         className="bg-white dark:bg-zinc-900 max-w-2xl w-full rounded-3xl overflow-hidden"
       >
-        <div className="relative">
+        <div className="relative bg-zinc-100 dark:bg-zinc-950">
           <img
             src={project.image || fallbackImage}
             alt={project.title}
             onError={(e) => {
               e.currentTarget.src = fallbackImage;
             }}
-            className="w-full aspect-video object-cover object-center"
+            className="w-full max-h-[60vh] object-contain object-center"
           />
           <button onClick={onClose} className="absolute top-4 right-4 bg-white rounded-full p-3 shadow">
             <X size={24} />
