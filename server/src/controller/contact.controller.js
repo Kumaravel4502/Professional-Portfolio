@@ -70,7 +70,7 @@ const sendContactEmail = async (req, res) => {
         html: `
           <p>Hi ${name},<br><br>
           Thank you for reaching out! I'll reply within 24 hours.<br><br>
-          Best regards,<br>Your Name</p>
+          Best regards,<br>Kumaravel D</p>
         `,
       }),
     ]);
