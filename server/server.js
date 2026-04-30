@@ -15,7 +15,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(helmet());
 app.use(compression());
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
+// app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
 app.use('/api/contact', contactRoutes);
