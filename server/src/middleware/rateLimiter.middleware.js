@@ -17,4 +17,4 @@ const contactRateLimiter = rateLimit({
   message: "Too many requests, please try later.",
 });
 
-module.exports = {contactRateLimiter};
+module.exports = { contactRateLimiter };
