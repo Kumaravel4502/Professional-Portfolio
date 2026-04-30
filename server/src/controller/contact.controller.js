@@ -1,35 +1,48 @@
+
 // const { transporter } = require('../utils/nodemailer.js');
 
 // const sendContactEmail = async (req, res) => {
 //   const { name, email, subject, message } = req.body;
+//   res.status(200).json({ message: 'Message received ✅' });
+
 
 //   try {
-//     // Email to you
-//     await transporter.sendMail({
-//       from: process.env.EMAIL_USER,
-//       to: process.env.EMAIL_USER,
-//       subject: ` Portfolio Message: ${subject}`,
-//       html: `
-//         <h2>New Contact Form Submission</h2>
-//         <p><strong>Name:</strong> ${name}</p>
-//         <p><strong>Email:</strong> ${email}</p>
-//         <p><strong>Message:</strong><br>${message}</p>
-//       `
-//     });
+//     console.log("Sending email from:", process.env.EMAIL_USER);
+//     console.log("To:", email)
+//     await Promise.all([
+//       transporter.sendMail({
 
-//     // Auto-reply to client
-//     await transporter.sendMail({
-//       from: process.env.EMAIL_USER,
-//       to: email,
-//       subject: 'Thank you! I received your message',
-//       html: `<p>Hi ${name},<br><br>Thank you for reaching out! I'll reply within 24 hours.<br><br>Best regards,<br>Your Name</p>`
-//     });
+//         from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+//         to: process.env.EMAIL_USER,
+//         subject: `📩 New Inquiry from ${name}`,
+//         html: `
+//     <h2>New Contact Request</h2>
+//     <p><strong>Name:</strong> ${name}</p>
+//     <p><strong>Email:</strong> ${email}</p>
+//     <p><strong>Subject:</strong> ${subject}</p>
+//     <p><strong>Message:</strong></p>
+//     <p>${message}</p>
+//   `,
+//       }),
+//       transporter.sendMail({
 
-//     res.status(200).json({ message: 'Email sent successfully!' });
+//         from: `"Kumaravel" <${process.env.EMAIL_USER}>`,
+//         to: email,
+//         subject: `Thanks for reaching out, ${name}!`,
+//         html: `
+//     <p>Hi ${name},</p>
+//     <p>Thanks for reaching out! I’ve received your message and will reply shortly.</p>
+//     <br/>
+//     <p>Best,<br/>Kumaravel</p>
+//   `,
+//       }),
+//     ]);
+
+//     res.status(200).json({ message: 'Email sent successfully ✅' });
+
 //   } catch (error) {
-    
-//     console.error(error);
-//     res.status(500).json({ message: 'Failed to send email' });
+//     console.error("MAIL ERROR:", error);
+//     res.status(500).json({ message: 'Failed to send email ❌' });
 //   }
 // };
 
@@ -44,40 +57,48 @@ const { transporter } = require('../utils/nodemailer.js');
 const sendContactEmail = async (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  // ⚡ Send response immediately (no waiting)
-  res.status(200).json({ message: 'Message received successfully!' });
+  console.log("📩 New request received");
+  console.log("From:", name, email);
 
-  try {
-    await Promise.all([
-      // 📩 Email to you
-      transporter.sendMail({
-        from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-        to: process.env.EMAIL_USER,
-        subject: `Portfolio Message: ${subject}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong><br>${message}</p>
-        `,
-      }),
+  res.status(200).json({ message: 'Message received ✅' });
 
-      // 📩 Auto reply to user
-      transporter.sendMail({
-        from: `"Portfolio" <${process.env.EMAIL_USER}>`,
-        to: email,
-        subject: 'Thank you! I received your message',
-        html: `
-          <p>Hi ${name},<br><br>
-          Thank you for reaching out! I'll reply within 24 hours.<br><br>
-          Best regards,<br>Kumaravel D</p>
-        `,
-      }),
-    ]);
+  (async () => {
+    try {
+      await Promise.all([
+        transporter.sendMail({
+          from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+          to: process.env.EMAIL_USER,
+          subject: `📩 New Inquiry from ${name}`,
+          html: `
+            <h2>New Contact Request</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Subject:</strong> ${subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+          `,
+        }),
 
-  } catch (error) {
-    console.error("MAIL ERROR:", error.message);
-  }
+        // 📩 Auto-reply to user
+        transporter.sendMail({
+          from: `"Kumaravel" <${process.env.EMAIL_USER}>`,
+          to: email,
+          subject: `Thanks for reaching out, ${name}!`,
+          html: `
+            <p>Hi ${name},</p>
+            <p>Thanks for reaching out! I’ve received your message and will reply shortly.</p>
+            <br/>
+            <p>Best,<br/>Kumaravel</p>
+          `,
+        }),
+      ]);
+
+      console.log("✅ Emails sent successfully");
+
+    } catch (error) {
+      console.error(" Email Error:", error);
+    }
+  })();
 };
 
 module.exports = { sendContactEmail };

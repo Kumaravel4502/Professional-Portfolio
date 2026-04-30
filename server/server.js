@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 
 const { connectDB } = require('./src/config/database.js');
 const visitorRoutes = require('./src/routes/visitor.routes.js');
@@ -18,6 +19,7 @@ app.use(compression());
 app.use(cors());
 // app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
+app.use(morgan('dev'));
 
 app.use('/api/contact', contactRoutes);
 
