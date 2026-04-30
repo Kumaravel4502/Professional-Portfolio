@@ -54,7 +54,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-pink-600 rounded-[3rem] rotate-6 opacity-20 blur-2xl" />
           <div className="relative glass rounded-[3rem] p-4 overflow-hidden h-full">
              <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
+                src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
               alt="Profile" 
               className="w-full h-full object-cover rounded-[2.5rem]"
             />
