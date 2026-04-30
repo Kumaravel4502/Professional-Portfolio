@@ -18,7 +18,6 @@ app.use(compression());
 app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
-app.use('/api/visitor', visitorRoutes);
 app.use('/api/contact', contactRoutes);
 
 connectDB().then(() => {
