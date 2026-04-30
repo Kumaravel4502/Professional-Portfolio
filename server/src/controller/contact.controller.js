@@ -78,6 +78,7 @@ const sendContactEmail = async (req, res) => {
             <p>${message}</p>
           `,
         }),
+        console.log("EMAIL_USER:", process.env.EMAIL_USER),
 
         // 📩 Auto-reply to user
         transporter.sendMail({
