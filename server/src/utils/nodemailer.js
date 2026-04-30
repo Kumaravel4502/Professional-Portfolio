@@ -3,7 +3,7 @@
 
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-
+const dns = require('dns');
 dotenv.config();
 
 // ✅ Force IPv4 (fix ENETUNREACH on Render)
