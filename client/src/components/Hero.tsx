@@ -20,21 +20,22 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Available for Internships
+            Open To Internships
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold font-display leading-[1.1] mb-8">
-            Building the <br />
-            <span className="gradient-text">Future of Web</span>
+            Full Stack <br />
+            <span className="gradient-text">MERN Developer</span>
           </h1>
-          
+
+
           <p className="text-xl text-zinc-400 max-w-lg mb-10 leading-relaxed">
-            {summary}
+            I build scalable web applications with clean UI, secure backend systems, and optimized performance.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="px-8 py-4 bg-white text-black rounded-full font-bold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all hover:scale-105"
             >
               View Work <ArrowRight size={20} />
@@ -45,7 +46,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -53,13 +54,13 @@ export default function Hero() {
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-pink-600 rounded-[3rem] rotate-6 opacity-20 blur-2xl" />
           <div className="relative glass rounded-[3rem] p-4 overflow-hidden h-full">
-             <img 
-                src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
-              alt="Profile" 
+            <img
+              src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+              alt="Profile"
               className="w-full h-full object-cover rounded-[2.5rem]"
             />
           </div>
-          
+
           {/* Floating Stats */}
           <div className="absolute -bottom-2 -left-2 sm:-bottom-6 sm:-left-6 glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl animate-bounce-slow">
             <div className="text-xl sm:text-3xl font-bold">25%</div>
@@ -74,3 +75,10 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
+
+
+
+

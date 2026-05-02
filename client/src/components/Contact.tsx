@@ -65,7 +65,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold font-display mb-6">Let's Connect</h2>
-          <p className="text-zinc-400 text-xl max-w-2xl mx-auto">Have a project in mind? Let's build something amazing together.</p>
+          {/* <p className="text-zinc-400 text-xl max-w-2xl mx-auto">Have a project in mind? Let's build something amazing together.</p> */}
+          <p className="text-zinc-400 text-xl max-w-2xl mx-auto">
+            Have a project in mind? Let's build something impactful together. I usually respond within 24 hours.
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-12">

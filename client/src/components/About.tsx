@@ -18,7 +18,7 @@ export default function About() {
             <p className="text-xl text-zinc-400 leading-relaxed mb-8">
               {summary}
             </p>
-            
+
             <div className="space-y-4">
               {[
                 "Passionate about clean code & scalability",
@@ -44,19 +44,19 @@ export default function About() {
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center">
               <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">1+</div>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Year Exp</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Years Experience</div>
             </div>
             <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center sm:mt-12">
               <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">10+</div>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Projects</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Projects Built</div>
             </div>
             <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center sm:-mt-12">
-              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">15+</div>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Issues Resolved</div>
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">25%</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Performance Improved</div>
             </div>
             <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center">
-              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">100%</div>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Commitment</div>
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">15</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Bugs Fixed</div>
             </div>
           </div>
         </motion.div>
