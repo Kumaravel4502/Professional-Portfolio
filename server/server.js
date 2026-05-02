@@ -19,7 +19,7 @@ app.use(helmet());
 app.use(compression());
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://kumaravelportfolio-dev.onrender.com",
+  "https://kumaraveldev.onrender.com",
 ];
 
 app.use(
