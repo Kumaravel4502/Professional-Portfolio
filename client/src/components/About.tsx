@@ -13,7 +13,7 @@ export default function About() {
           className="relative"
         >
           <div className="absolute inset-0 bg-violet-600/10 blur-[80px] rounded-full" />
-          <div className="relative glass p-10 rounded-[3rem] border-white/5">
+          <div className="relative glass p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border-white/5">
             <h2 className="text-4xl font-bold font-display mb-8">About Me</h2>
             <p className="text-xl text-zinc-400 leading-relaxed mb-8">
               {summary}
@@ -39,23 +39,25 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 gap-6"
+          className="w-full"
         >
-          <div className="glass p-8 rounded-[2.5rem] flex flex-col justify-center items-center text-center">
-            <div className="text-5xl font-bold gradient-text mb-2">1+</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-zinc-500">Year Exp</div>
-          </div>
-          <div className="glass p-8 rounded-[2.5rem] flex flex-col justify-center items-center text-center mt-12">
-            <div className="text-5xl font-bold gradient-text mb-2">10+</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-zinc-500">Projects</div>
-          </div>
-          <div className="glass p-8 rounded-[2.5rem] flex flex-col justify-center items-center text-center -mt-12">
-            <div className="text-5xl font-bold gradient-text mb-2">15+</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-zinc-500">Issues Resolved</div>
-          </div>
-          <div className="glass p-8 rounded-[2.5rem] flex flex-col justify-center items-center text-center">
-            <div className="text-5xl font-bold gradient-text mb-2">100%</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-zinc-500">Commitment</div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center">
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">1+</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Year Exp</div>
+            </div>
+            <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center sm:mt-12">
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">10+</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Projects</div>
+            </div>
+            <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center sm:-mt-12">
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">15+</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Issues Resolved</div>
+            </div>
+            <div className="glass p-4 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-center items-center text-center">
+              <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">100%</div>
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-zinc-500">Commitment</div>
+            </div>
           </div>
         </motion.div>
       </div>

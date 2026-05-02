@@ -53,11 +53,11 @@ export default function Projects() {
               className="group bg-zinc-950 border border-white/10 rounded-3xl p-4 hover:border-white/20 transition-all cursor-pointer"
             >
               {/* IMAGE */}
-              <div className="relative  overflow-hidden bg-zinc-900 border border-white/10">
+              <div className="relative overflow-hidden bg-zinc-900 border border-white/10 rounded-2xl aspect-video">
                 <img
                   src={project.image || getFallbackImage(project.id)}
                   alt={project.title}
-                  className="w-full h-[180px] object-cover"
+                  className="w-full h-full object-cover object-top"
                   onError={(e) =>
                     ((e.target as HTMLImageElement).src =
                       getFallbackImage(project.id))
@@ -126,7 +126,7 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.92, y: 60 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.92 }}
-              className="relative w-full max-w-5xl rounded-3xl overflow-hidden border border-white/10 bg-zinc-950 shadow-2xl"
+              className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl border border-white/10 bg-zinc-950 shadow-2xl"
             >
               {/* CLOSE */}
               <button
@@ -137,11 +137,11 @@ export default function Projects() {
               </button>
 
               {/* IMAGE */}
-              <div className="relative h-[260px] sm:h-[320px] md:h-[420px] overflow-hidden">
+              <div className="relative h-[260px] sm:h-[320px] md:h-[420px] flex items-center justify-center bg-black">
                 <img
                   src={selected.image || getFallbackImage(selected.id)}
                   alt={selected.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   onError={(e) =>
                     ((e.target as HTMLImageElement).src =
                       getFallbackImage(selected.id))
@@ -178,7 +178,7 @@ export default function Projects() {
                   </div>
 
                   {/* BUTTONS */}
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <a
                       href={selected.live || "#"}
                       target="_blank"

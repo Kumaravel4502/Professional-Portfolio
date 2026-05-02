@@ -23,7 +23,7 @@ export default function Hero() {
             Available for Internships
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold font-display leading-[1.1] mb-8">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold font-display leading-[1.1] mb-8">
             Building the <br />
             <span className="gradient-text">Future of Web</span>
           </h1>
@@ -32,16 +32,16 @@ export default function Hero() {
             {summary}
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <a 
               href="#projects" 
-              className="px-8 py-4 bg-white text-black rounded-full font-bold flex items-center gap-2 hover:bg-zinc-200 transition-all hover:scale-105"
+              className="px-8 py-4 bg-white text-black rounded-full font-bold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all hover:scale-105"
             >
               View Work <ArrowRight size={20} />
             </a>
-            <button className="px-8 py-4 glass rounded-full font-bold flex items-center gap-2 glass-hover hover:scale-105">
+            <a href="./Kumaravel_Resume.pdf" download="Kumaravel_Resume.pdf" className="px-8 py-4 glass rounded-full font-bold flex items-center justify-center gap-2 glass-hover hover:scale-105">
               Download CV <Download size={20} />
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -61,13 +61,13 @@ export default function Hero() {
           </div>
           
           {/* Floating Stats */}
-          <div className="absolute -bottom-6 -left-6 glass p-6 rounded-3xl animate-bounce-slow">
-            <div className="text-3xl font-bold">25%</div>
-            <div className="text-xs text-zinc-400 uppercase tracking-tighter">Perf. Optimization</div>
+          <div className="absolute -bottom-2 -left-2 sm:-bottom-6 sm:-left-6 glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl animate-bounce-slow">
+            <div className="text-xl sm:text-3xl font-bold">25%</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400 uppercase tracking-tighter">Perf. Optimization</div>
           </div>
-          <div className="absolute top-12 -right-6 glass p-6 rounded-3xl animate-bounce-slow" style={{ animationDelay: '1s' }}>
-            <div className="text-3xl font-bold">3+</div>
-            <div className="text-xs text-zinc-400 uppercase tracking-tighter">MERN Apps Built</div>
+          <div className="absolute top-8 -right-2 sm:top-12 sm:-right-6 glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl animate-bounce-slow" style={{ animationDelay: '1s' }}>
+            <div className="text-xl sm:text-3xl font-bold">3+</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400 uppercase tracking-tighter">MERN Apps Built</div>
           </div>
         </motion.div>
       </div>

@@ -23,11 +23,8 @@ const skills = [
   { name: "HTML", icon: FaHtml5, color: "#E34F26" },
   { name: "CSS", icon: FaCss3Alt, color: "#1572B6" },
   { name: "JavaScript", icon: IoLogoJavascript, color: "#F7DF1E" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "React", icon: FaReact, color: "#61DAFB" },
-  { name: "Next.js", icon: RiNextjsFill, color: "#000000" },
   { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#06B6D4" },
-  { name: "Redux", icon: SiRedux, color: "#764ABC" },
   { name: "Material UI", icon: SiMui, color: "#007FFF" },
   { name: "Node.js", icon: FaNodeJs, color: "#68A063" },
   { name: "Express.js", icon: SiExpress, color: "#000000" },
@@ -53,7 +50,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center">
           {skills.map((item, index) => (
             <motion.div
               key={index}
@@ -66,13 +63,13 @@ export default function Skills() {
                 scale: 1.05,
                 transition: { duration: 0.2 },
               }}
-              className="group"
+              className="group w-full max-w-[160px]"
             >
-              <div className="glass p-8 rounded-3xl w-40 h-40 flex flex-col items-center justify-center gap-4 border border-white/10 hover:border-violet-500/30 transition-all duration-300">
-                <div className="text-5xl transition-transform group-hover:scale-110">
+              <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl w-full aspect-square flex flex-col items-center justify-center gap-2 sm:gap-4 border border-white/10 hover:border-violet-500/30 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl transition-transform group-hover:scale-110">
                   <item.icon style={{ color: item.color }} />
                 </div>
-                <p className="text-sm font-medium text-center text-zinc-300 group-hover:text-white transition-colors">
+                <p className="text-xs sm:text-sm font-medium text-center text-zinc-300 group-hover:text-white transition-colors">
                   {item.name}
                 </p>
               </div>
