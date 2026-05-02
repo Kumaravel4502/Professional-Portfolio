@@ -1,12 +1,13 @@
 
 
 
-// const nodemailer = require('nodemailer');
-// const dotenv = require('dotenv');
-// const dns = require('dns');
-// dotenv.config();
+const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+const dns = require('dns');
+dotenv.config();
 
-// dns.setDefaultResultOrder('ipv4first');
+// ✅ Force IPv4 (fix ENETUNREACH on Render)
+dns.setDefaultResultOrder('ipv4first');
 
 // const transporter = nodemailer.createTransport({
 //   service: 'gmail',
@@ -26,37 +27,18 @@
 
 
 
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: process.env.EMAIL_USER,
-//     pass: process.env.EMAIL_PASS,
-//   },
-// });
-
-
-// module.exports = { transporter };
-
-
-
-
-const nodemailer = require("nodemailer");
-
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  // service: 'gmail',
+  host: process.env.EMAIL_HOST,
   port: 587,
   secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
-  }, tls: {
-    rejectUnauthorized: false, // ✅ Fix for self-signed cert
   },
-  family: 4,
-
-  connectionTimeout: 10000, // ⏱ 10s max
-  greetingTimeout: 5000,
-  socketTimeout: 10000,
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = { transporter };
