@@ -53,6 +53,10 @@ const transporter = nodemailer.createTransport({
     rejectUnauthorized: false, // ✅ Fix for self-signed cert
   },
   family: 4,
+
+  connectionTimeout: 10000, // ⏱ 10s max
+  greetingTimeout: 5000,
+  socketTimeout: 10000,
 });
 
 module.exports = { transporter };
