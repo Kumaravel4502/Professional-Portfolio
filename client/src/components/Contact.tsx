@@ -31,7 +31,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      await fetch("https://formsubmit.co/kumaravel.dev45@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/kumaravel.dev45@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,6 +48,10 @@ export default function Contact() {
       setLoading(false);
     }
   };
+
+
+
+
 
   return (
     <section id="contact" className="relative overflow-hidden">
@@ -162,3 +166,15 @@ export default function Contact() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
