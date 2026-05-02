@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
-import API from '../api/api';
+// import axios from 'axios';
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
@@ -12,15 +11,38 @@ export default function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   try {
+  //     await API.post('/contact', form);
+  //     toast.success('Message sent! I will get back to you soon. 🎉');
+  //     setForm({ name: '', email: '', subject: '', message: '' });
+  //   } catch (err) {
+  //     toast.error('Something went wrong. Please try again.');
+  //     console.error(err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      await API.post('/contact', form);
-      toast.success('Message sent! I will get back to you soon. 🎉');
-      setForm({ name: '', email: '', subject: '', message: '' });
+      await fetch("https://formsubmit.co/kumaravel.dev45@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      toast.success("Message sent! I will get back to you soon. 🎉");
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
-      toast.error('Something went wrong. Please try again.');
+      toast.error("Something went wrong. Please try again.");
       console.error(err);
     } finally {
       setLoading(false);
