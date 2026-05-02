@@ -49,7 +49,7 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
-  },  tls: {
+  }, tls: {
     rejectUnauthorized: false, // ✅ Fix for self-signed cert
   },
   family: 4,
