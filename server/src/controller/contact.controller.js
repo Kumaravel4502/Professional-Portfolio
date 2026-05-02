@@ -75,7 +75,7 @@ const sendContactEmail = async (req, res) => {
           <p>${message}</p>
         `,
       }),
-      
+
       // 📩 Auto-reply to user
       transporter.sendMail({
         from: `"Kumaravel" <${process.env.EMAIL_USER}>`,
