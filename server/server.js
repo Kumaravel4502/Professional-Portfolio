@@ -19,7 +19,7 @@ app.use(helmet());
 app.use(compression());
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://kumaraveldev45.onrender.com",
+  "https://kdfreedev.onrender.com",
 ];
 
 app.use(
@@ -39,6 +39,7 @@ app.use(
 app.use(express.json());
 app.use(morgan("dev"));
 
+app.use('/api/visitor', visitorRoutes);
 app.use("/api/contact", contactRoutes);
 
 connectDB().then(() => {
