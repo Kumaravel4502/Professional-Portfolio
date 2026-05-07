@@ -40,7 +40,7 @@ export default function Hero() {
             >
               View Work <ArrowRight size={20} />
             </a>
-            <a href="./Kumaravel_Resume.pdf" download="Kumaravel_Resume.pdf" className="px-8 py-4 glass rounded-full font-bold flex items-center justify-center gap-2 glass-hover hover:scale-105">
+            <a href="./KumaravelD_Resume.pdf" download="KumaravelD_Resume.pdf" className="px-8 py-4 glass rounded-full font-bold flex items-center justify-center gap-2 glass-hover hover:scale-105">
               Download CV <Download size={20} />
             </a>
           </div>
